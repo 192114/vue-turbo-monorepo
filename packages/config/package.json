@@ -1,0 +1,25 @@
+{
+  "name": "@shadow/config",
+  "version": "0.0.1",
+  "private": true,
+  "type": "module",
+  "files": [
+    "eslint-config/index.js",
+    "prettier-preset.js",
+    "tailwind-preset.js",
+    "tsconfig.base.json"
+  ],
+  "dependencies": {
+    "@eslint/js": "^9.27.0",
+    "@typescript-eslint/eslint-plugin": "^8.33.0",
+    "@typescript-eslint/parser": "^8.33.0",
+    "eslint": "^9.27.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-boundaries": "^5.0.1",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.4.0",
+    "eslint-plugin-vue": "^10.1.0",
+    "tailwindcss": "^3.4.1",
+    "tailwindcss-animate": "^1.0.7"
+  }
+}
