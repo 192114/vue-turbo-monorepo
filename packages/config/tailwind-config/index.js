@@ -1,10 +1,7 @@
-const colors = require('tailwindcss/colors');
-
 /** @type {import('tailwindcss').Config} */
 const baseConfig = {
   darkMode: 'class',
   theme: {
-    extend: {
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
@@ -44,7 +41,6 @@ const baseConfig = {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)',
-      },
     },
   },
   plugins: [require('tailwindcss-animate')],
@@ -61,9 +57,13 @@ module.exports = function preset(config = {}) {
     theme: {
       ...baseConfig.theme,
       ...(config.theme || {}),
-      extend: {
-        ...baseConfig.theme.extend,
-        ...(config.theme?.extend || {}),
+      colors: {
+        ...baseConfig.theme.colors,
+        ...(config.theme?.colors || {}),
+      },
+      borderRadius: {
+        ...baseConfig.theme.borderRadius,
+        ...(config.theme?.borderRadius || {}),
       },
     },
     plugins: [...(baseConfig.plugins || []), ...(config.plugins || [])],

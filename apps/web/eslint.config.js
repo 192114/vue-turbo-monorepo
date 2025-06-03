@@ -1,3 +1,13 @@
 import preset from '@shadow/config/eslint-config/index.js';
 
-export default preset;
+export default [
+  {
+    ignores: [
+      '**/dist/**',
+      '**/build/**',
+      '**/node_modules/**',
+      '**/coverage/**',
+    ],
+  },
+  ...preset,
+];

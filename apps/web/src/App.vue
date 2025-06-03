@@ -1,6 +1,6 @@
 <template>
   <div class="min-h-screen bg-background text-foreground">
-    <Button size="sm">Click me</Button>
+    <Button size="sm">Click me </Button>
     <router-view />
   </div>
 </template>

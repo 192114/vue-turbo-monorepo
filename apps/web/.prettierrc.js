@@ -1,8 +1,3 @@
-// module.exports = {
-//   ...require('@shadow/config/prettier-preset.js'),
-// }; 
-
-
-import preset from '@shadow/config/prettier-preset.js';
+import preset from '@shadow/config/prettier-config/index.js';
 
 export default preset;

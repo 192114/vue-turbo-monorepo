@@ -1,6 +1,7 @@
 import { resolve, dirname } from 'path'
 import { fileURLToPath } from 'url'
 
+import tailwindcss from '@tailwindcss/vite'
 import vue from '@vitejs/plugin-vue'
 import { defineConfig } from 'vite'
 import dts from 'vite-plugin-dts'
@@ -19,6 +20,7 @@ export default defineConfig({
         content,
       }),
     }),
+    tailwindcss(),
   ],
   build: {
     lib: {

@@ -1,4 +1,4 @@
-const preset = require('@shadow/config/tailwind-preset');
+const preset = require('@shadow/config/tailwind-config/index.js');
 
 /** @type {import('tailwindcss').Config} */
 module.exports = preset({
