@@ -9,7 +9,7 @@ A modern Vue 3 monorepo starter template with Turborepo and pnpm workspace.
 - ⚡️ [Vite](https://vitejs.dev/) - Next Generation Frontend Tooling
 - 🎨 [TailwindCSS](https://tailwindcss.com/) - A utility-first CSS framework
 - 🔧 [TypeScript](https://www.typescriptlang.org/) - Type safe development
-- 📚 [Histoire](https://histoire.dev/) - A new way to write stories for your components
+- 📚 [Storybook](https://storybook.js.org/) - Write stories for your components
 - 🎯 [ESLint](https://eslint.org/) + [Prettier](https://prettier.io/) - Code linting and formatting
 
 ## Project Structure
@@ -20,7 +20,7 @@ A modern Vue 3 monorepo starter template with Turborepo and pnpm workspace.
 │   └── web                 # Main web application
 └── packages
     ├── config             # Shared configurations (TypeScript, ESLint, etc.)
-    └── ui                 # UI component library with Histoire
+    └── ui                 # UI component library with Storybook
 ```
 
 ## Getting Started
@@ -50,6 +50,13 @@ pnpm lint
 
 - Web App: `http://localhost:5173`
 - UI Documentation: `http://localhost:6006`
+
+### Start UI Story
+
+```bash
+pnpm --filter ui run storybook
+
+```
 
 ## License
 
