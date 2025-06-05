@@ -1,31 +1,29 @@
-import type { StorybookConfig } from '@storybook/vue3-vite'
-import { mergeConfig } from 'vite'
-import type { InlineConfig } from 'vite'
+import type { StorybookConfig } from '@storybook/vue3-vite';
 
-const config: StorybookConfig = {
-  stories: ['../src/**/*.mdx', '../src/**/*.stories.@(js|jsx|mjs|ts|tsx)'],
-  addons: [
-    '@storybook/addon-onboarding',
-    '@chromatic-com/storybook',
-    '@storybook/addon-docs',
-    '@storybook/addon-a11y',
-    // '@storybook/addon-vitest',
-  ],
-  framework: {
-    name: '@storybook/vue3-vite',
-    options: {},
-  },
-  // viteFinal: async (config: InlineConfig) => {
-  //   return mergeConfig(config, {
-  //     css: {
-  //       postcss: {
-  //         plugins: {
-  //           '@tailwindcss/postcss': {},
-  //         },
-  //       },
-  //     },
-  //   })
-  // },
+import { join, dirname } from "path"
+
+/**
+* This function is used to resolve the absolute path of a package.
+* It is needed in projects that use Yarn PnP or are set up within a monorepo.
+*/
+function getAbsolutePath(value: string): any {
+  return dirname(require.resolve(join(value, 'package.json')))
 }
-
-export default config
+const config: StorybookConfig = {
+  "stories": [
+    "../src/**/*.mdx",
+    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)"
+  ],
+  "addons": [
+    getAbsolutePath('@storybook/addon-onboarding'),
+    getAbsolutePath('@chromatic-com/storybook'),
+    getAbsolutePath('@storybook/addon-docs'),
+    getAbsolutePath("@storybook/addon-a11y"),
+    getAbsolutePath("@storybook/addon-vitest")
+  ],
+  "framework": {
+    "name": getAbsolutePath('@storybook/vue3-vite'),
+    "options": {}
+  }
+};
+export default config;

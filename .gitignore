@@ -31,3 +31,5 @@ coverage
 .histoire
 __histoire__
 histoire.generated.* 
+*storybook.log
+storybook-static
