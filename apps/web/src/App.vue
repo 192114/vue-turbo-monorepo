@@ -1,7 +1,7 @@
 <template>
   <div class="min-h-screen bg-background text-foreground">
-    <Button size="sm">Click me </Button>
-    <router-view />
+    <Button size="lg" variant="default">Click me </Button>
+    <!-- <router-view /> -->
   </div>
 </template>
 
