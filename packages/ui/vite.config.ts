@@ -28,7 +28,15 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
-      external: ['vue', '@vueuse/core', 'radix-vue'],
+      external: [
+        'vue',
+        '@vueuse/core',
+        'radix-vue',
+        'tailwindcss',
+        'tailwind-merge',
+        'class-variance-authority',
+        'clsx',
+      ],
       output: {
         globals: {
           vue: 'Vue',

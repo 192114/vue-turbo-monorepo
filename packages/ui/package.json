@@ -30,7 +30,12 @@
     "dev:version": "pnpm run changeset:add && pnpm run version:check"
   },
   "peerDependencies": {
-    "vue": ">=3"
+    "vue": ">=3",
+    "tailwindcss": ">=4",
+    "tailwind-merge": ">=3",
+    "class-variance-authority": ">=0.7.0",
+    "clsx": ">=2.0.0",
+    "radix-vue": ">=1.9.0"
   },
   "dependencies": {
     "@vueuse/core": "^13.3.0",

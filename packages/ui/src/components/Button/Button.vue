@@ -13,7 +13,7 @@
 <script setup lang="ts">
 import { buttonVariants } from './button-variants'
 
-interface Props {
+export interface Props {
   variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link'
   size?: 'default' | 'sm' | 'lg' | 'icon'
   className?: string
