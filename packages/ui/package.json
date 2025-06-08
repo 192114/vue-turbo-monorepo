@@ -30,12 +30,29 @@
     "dev:version": "pnpm run changeset:add && pnpm run version:check"
   },
   "peerDependencies": {
-    "vue": ">=3",
-    "tailwindcss": ">=4",
-    "tailwind-merge": ">=3",
-    "class-variance-authority": ">=0.7.0",
-    "clsx": ">=2.0.0",
-    "radix-vue": ">=1.9.0"
+    "vue": "^3.2.0",
+    "tailwindcss": "^4.1.8",
+    "tailwind-merge": "^3.3.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "radix-vue": "^1.9.17"
+  },
+  "peerDependenciesMeta": {
+    "vue": {
+      "optional": false
+    },
+    "tailwindcss": {
+      "optional": false
+    },
+    "class-variance-authority": {
+      "optional": false
+    },
+    "clsx": {
+      "optional": false
+    },
+    "tailwind-merge": {
+      "optional": false
+    }
   },
   "dependencies": {
     "@vueuse/core": "^13.3.0",

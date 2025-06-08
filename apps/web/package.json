@@ -13,7 +13,7 @@
   "dependencies": {
     "@shadow/ui": "workspace:*",
     "@vueuse/core": "^13.3.0",
-    "vue": "^3.5.16",
+    "vue": "^2.5.16",
     "vue-router": "^4.5.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
