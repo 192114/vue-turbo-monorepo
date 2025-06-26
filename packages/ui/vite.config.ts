@@ -14,10 +14,14 @@ export default defineConfig({
     vue(),
     dts({
       include: ['src/**/*.{vue,ts,tsx}'],
+      exclude: ['src/**/*.stories.ts', 'src/**/*.test.ts', 'src/**/*.spec.ts'],
       beforeWriteFile: (filePath, content) => ({
         filePath: filePath.replace('/dist/src/', '/dist/'),
         content,
       }),
+      // 优化类型生成
+      insertTypesEntry: true,
+      logLevel: 'warn',
     }),
   ],
   build: {
@@ -28,20 +32,20 @@ export default defineConfig({
       formats: ['es'],
     },
     rollupOptions: {
-      external: [
-        'vue',
-        '@vueuse/core',
-        'radix-vue',
-        'tailwindcss',
-        'tailwind-merge',
-        'class-variance-authority',
-        'clsx',
-      ],
+      external: ['vue', 'tailwindcss', 'tailwind-merge', 'class-variance-authority', 'clsx'],
       output: {
         globals: {
           vue: 'Vue',
+          tailwindcss: 'tailwindcss',
+          'tailwind-merge': 'tailwindMerge',
+          'class-variance-authority': 'cva',
+          clsx: 'clsx',
         },
       },
     },
+    sourcemap: true,
+    target: 'es2020',
+    minify: 'esbuild',
+    cssCodeSplit: false,
   },
 })
