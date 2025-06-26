@@ -37,19 +37,14 @@ A modern Vue 3 monorepo starter template with Turborepo and pnpm workspace.
 pnpm install
 
 # Start development
-pnpm dev
+pnpm dev --filter=web
 
 # Build all packages
-pnpm build
+pnpm build --filter=web
 
 # Lint all packages
 pnpm lint
 ```
-
-### Development
-
-- Web App: `http://localhost:5173`
-- UI Documentation: `http://localhost:6006`
 
 ### Start UI Story
 
